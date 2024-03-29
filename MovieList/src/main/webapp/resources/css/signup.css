@@ -1,0 +1,29 @@
+/*회원가입*/
+.signup table {
+    padding-top: 10%;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup > button {
+    height: 40px;
+    cursor: pointer;
+}
+
+.msg {
+    font-size: medium;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.detail input {
+    font-size: large;
+}
+
+.confirm {
+    color: green;
+}

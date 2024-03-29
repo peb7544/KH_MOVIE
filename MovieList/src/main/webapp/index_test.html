@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="resources/css/main.css">
+    <!--<link rel="stylesheet" href="resources/css/save.css">-->
+
+    <title>Document</title>
+</head>
+<body>
+    <!--<main style="top:15%">
+        <h1>회원가입</h1>
+        
+        <div class="detail">
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td><input > </td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password"> </td>
+                </tr>
+                <tr>
+                    <td>비밀번호 확인</td>
+                    <td><input type="password"> </td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input> </td>
+                </tr>
+                <tr>
+                    <td>개봉일</td>
+                    <td><input> </td>
+                </tr>
+                <tr>
+                    <td>시간</td>
+                    <td><input value="116분"> </td>
+                </tr>
+                <tr>
+                    <td>소개</td>
+                    <td><textarea>
+                        세상에서 가장 달콤한 여정 좋은 일은 모두 꿈에서부터 시작된다!
+                    </textarea></td>
+                </tr>
+                <tr>
+                    <td>후기</td>
+                    <td><textarea></textarea></td>
+                </tr>
+            </table>
+        </div>
+    </main>-->
+      <!-- <main>
+        <h1>영화 등록</h1>
+        
+        <div class="detail">
+            <table>
+                <tr>
+                    <td>영화제목</td>
+                    <td><input value="윙카"> </td>
+                </tr>
+                <tr>
+                    <td>평점</td>
+                    <td >
+                        <div class="review">
+                            <input type="radio" name="review" value="5" id="star5"><label for="star5">★</label> 
+                            <input type="radio" name="review" value="4" id="star4"><label for="star4">★</label> 
+                            <input type="radio" name="review" value="3" id="star3"><label for="star3">★</label> 
+                            <input type="radio" name="review" value="2" id="star2"><label for="star2">★</label> 
+                            <input type="radio" name="review" value="1" id="star1"><label for="star1">★</label>
+                        </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>장르</td>
+                    <td>
+                        <select class="cbSelect">
+                            <option>선택하세요</option>
+                            <option>판타지</option>
+                            <option>로맨스</option>
+                            <option>공포</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>감독</td>
+                    <td><input value="폴킹"> </td>
+                </tr>
+                <tr>
+                    <td>제작사</td>
+                    <td><input value="헤이데이 필름스,빌리지 로드쇼 픽처스"> </td>
+                </tr>
+                <tr>
+                    <td>나라</td>
+                    <td>
+                        <select class="cbSelect">
+                            <option>미국</option>
+                            <option>대한민국</option>
+                            <option>러시아</option>
+                            <option>영국</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>개봉일</td>
+                    <td><input value="2024-01-31"> </td>
+                </tr>
+                <tr>
+                    <td>시간</td>
+                    <td><input value="116분"> </td>
+                </tr>
+                <tr>
+                    <td>소개</td>
+                    <td><textarea>
+                        세상에서 가장 달콤한 여정 좋은 일은 모두 꿈에서부터 시작된다!
+                    </textarea></td>
+                </tr>
+                <tr>
+                    <td>후기</td>
+                    <td><textarea></textarea></td>
+                </tr>
+            </table>
+
+            <button>등록</button>
+        </div>
+    </main>-->
+ <main>
+        <h1>추천 영화 목록 html</h1>
+
+        <div class="headBtn">
+            <div>
+                <span style="font-weight: bold;">성동일님 환영합니다.</span>
+            </div>
+            <div>
+                <button>등록</button>
+                <button>로그아웃</button>
+            </div>
+        </div>
+
+        <div class="menuBtn">
+            <a>전체</a>
+            <a>판타지</a>
+            <a>공포</a>
+            <a>판타지</a>
+            <a>공포</a>
+            <a>판타지</a>
+            <a>공포</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th width="250">영화 제목</th>
+                    <th>평점</th>
+                    <th>작성자</th>
+                    <th>작성일자</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="rowHover">
+                    <td>1</td>
+                    <td>윙카</td>
+                    <td>
+                        <label class="star_y">★★★★</label><label class="star_n">★</label>
+                    </td>
+                    <td>성동일</td>
+                    <td>2024-01-31</td>
+                </tr>
+                <tr class="detailTr"><td colspan="5">
+                    <div class="detail">
+                        <div class="headBtn crudBtn">
+                                <div></div>
+                                <div>
+                                    <button>수정</button>
+                                    <button>삭제</button>
+                                </div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>장르</td>
+                                <td><input value="판타지" readonly> </td>
+                            </tr>
+                            <tr>
+                                <td>감독</td>
+                                <td><input value="폴킹" readonly> </td>
+                            </tr>
+                            <tr>
+                                <td>제작사</td>
+                                <td><input value="헤이데이 필름스,빌리지 로드쇼 픽처스" readonly> </td>
+                            </tr>
+                            <tr>
+                                <td>나라</td>
+                                <td><input value="미국" readonly> </td>
+                            </tr>
+                            <tr>
+                                <td>개봉일</td>
+                                <td><input value="2024-01-31" readonly> </td>
+                            </tr>
+                            <tr>
+                                <td>시간</td>
+                                <td><input value="116분" readonly> </td>
+                            </tr>
+                            <tr>
+                                <td>소개</td>
+                                <td><textarea readonly>
+                                    세상에서 가장 달콤한 여정 좋은 일은 모두 꿈에서부터 시작된다!
+                                </textarea></td>
+                            </tr>
+                            <tr>
+                                <td>후기</td>
+                                <td><textarea readonly></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td></tr>
+                <tr class="rowHover">
+                    <td>2</td>
+                    <td>사운드 오브 프리덤</td>
+                    <td>
+                        <label class="star_y">★★★★</label><label class="star_n">★</label>
+                    </td>
+                    <td>송종기</td>
+                    <td>2024-02-21</td>
+                </tr>
+            </tbody>
+        
+        </table>
+    </main>
+     <!-- <h3 style="color: #bbb;">작성된 글이 없습니다.</h3>
+
+		<c:choose>
+        	
+        	<%-- 로그인 X --%>
+        	<c:when test="${empty sessionScope.loginMember }">
+	        <form action="/login" method="post" class="login">
+	            <input name="inputId" placeholder="아이디" required>
+	            
+	            <br>
+	
+	            <input type="password" name="inputPw" placeholder="암호" required>
+	
+	            <br>
+	
+	            <button>로그인</button>
+	
+	        </form>
+	
+	        <form class="signup">
+	            <button>회원가입</button>
+	        </form>
+	        </c:when>
+	        
+	        <%-- 로그인 O --%>
+	        <c:otherwise>
+	        	<h1>로그인 성공</h1>
+	        </c:otherwise>
+	        
+        </c:choose>
+        
+        <c:if test ="${not empty sessionScope.msg }">
+        	<script>alert('${msg}')</script>
+        	<c:remove var="msg" scope="session"/>
+        </c:if>-->
+   <!-- </main>-->
+</body>
+</html>

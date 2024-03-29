@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>query.xml file!!</comment>
+
+	<entry key="selectAll">
+		SELECT 
+			 MOVIE_NO
+			,MOVIE_TITLE
+			,RATING
+			,MEMBER_ID
+			,MEMBER_NAME 
+			,TO_CHAR(INS_DT, 'YYYY-MM-DD') INS_DT
+			,(SELECT CODE_NAME FROM COMM_CD WHERE CODE_ID = 'GENRE' AND GENRE = CODE_NO) GENRE
+			,PRODUCE
+			,(SELECT CODE_NAME FROM COMM_CD WHERE CODE_ID = 'COUNTRY' AND COUNTRY = CODE_NO) COUNTRY
+			,TO_CHAR(RELEASE_DATE, 'YYYY-MM-DD') RELEASE_DATE
+			,MOVIE_TIME
+			,INTRODUCE
+			,MOVIE_REVIEW
+			,DIRECTOR
+		FROM "MOVIE"
+		JOIN "MEMBER" USING(MEMBER_ID)
+		WHERE MOVIE_DEL = 'N'
+		ORDER BY MOVIE_NO DESC
+	</entry>
+	
+	<entry key="codeSel">
+		SELECT
+			 CODE_NO
+			,CODE_NAME
+		FROM COMM_CD
+		WHERE CODE_ID = ?
+	</entry>
+	
+	<entry key="insert">
+		INSERT INTO "MOVIE" VALUES(SEQ_MOVIE_NO.NEXTVAL, ?, ?, ?, ?, ?, 
+			?, ?, ?, ?, ?, ?, SYSDATE, DEFAULT)
+	</entry>
+	
+	<entry key="delete">
+		UPDATE "MOVIE" SET MOVIE_DEL = 'Y'
+		WHERE MOVIE_NO = ?
+	</entry>
+	
+	<entry key="selectDeail">
+		SELECT 
+			 MOVIE_NO
+			,MOVIE_TITLE
+			,RATING
+			,MEMBER_ID
+			,MEMBER_NAME 
+			,TO_CHAR(INS_DT, 'YYYY-MM-DD') INS_DT
+			,GENRE
+			,PRODUCE
+			,COUNTRY
+			,TO_CHAR(RELEASE_DATE, 'YYYY-MM-DD') RELEASE_DATE
+			,MOVIE_TIME
+			,INTRODUCE
+			,MOVIE_REVIEW
+			,DIRECTOR
+		FROM "MOVIE"
+		JOIN "MEMBER" USING(MEMBER_ID)
+		WHERE MOVIE_DEL = 'N'
+		AND MOVIE_NO = ?
+	</entry>
+	
+	<entry key="update">
+		UPDATE MOVIE SET 
+			 MOVIE_TITLE = ?
+			,GENRE = ?
+			,PRODUCE = ?
+			,COUNTRY = ?
+			,RELEASE_DATE = ?
+			,MOVIE_TIME = ?
+			,INTRODUCE = ?
+			,MOVIE_REVIEW = ?
+			,RATING = ?
+			,DIRECTOR = ?
+		WHERE MOVIE_DEL = 'N'
+		AND MOVIE_NO = ?
+	</entry>
+	
+</properties>

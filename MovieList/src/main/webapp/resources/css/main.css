@@ -1,0 +1,185 @@
+body {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main {
+    position: absolute;
+    /*top: 20%;*/
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+	cursor: pointer;
+}
+
+.menuBtn a:hover {
+	background: cadetblue;
+	color: white;
+}
+
+/* 로그인 */
+h1 {
+	margin-bottom: 30px;
+}
+
+.login > input, .login > button, .signup > button  {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.login > button {
+   margin-left: 4px;
+   background-color: lightblue;
+}
+
+.signup > button {
+    margin-left: 2px;
+    background-color: #bbb;
+}
+
+main button {
+   color: white;
+   font-weight: bold;
+   border: 0 !important;
+}
+
+main button:hover {
+    background: cadetblue;
+}
+
+/*상단 버튼*/
+.headBtn {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headBtn div {
+    display: flex;
+}
+
+.headBtn button {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: dimgrey;
+}
+
+/*검색버튼*/
+.menuBtn {
+    width: 670px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.menuBtn a {
+    border: 2px solid #bbb;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* 수정, 삭제 버튼 */
+.headBtn.crudBtn button {
+    width: 80px !important;
+    height: 28px;
+    border-radius: 4px;
+}
+
+/* 테이블 목록 */
+table {
+    width: 600px;
+    font-size: larger;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: lightblue;
+    color: white;
+}
+
+tbody {
+    text-align: center;
+}
+
+tbody tr.rowHover, .star_y, .star_n {
+    cursor: pointer;
+}
+
+tbody tr.rowHover:hover {
+    background-color: #bbb;
+    color: white;
+}
+
+.star_y {
+	color: gold;
+}
+
+.star_n {
+	color: gainsboro;
+}
+
+/* 상세 */
+.detail {
+    border: 2px solid #bbb;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    height: 467px;
+}
+
+/*.detailTr {
+    display:none;
+}*/
+
+.detail table {
+    display: flex;
+    justify-content: center;
+}
+
+.detail input, .detail textarea {
+	width: 350px;
+    outline: none;
+}
+
+.detailText input, .detailText textarea{
+	cursor: default;
+}
+
+.detail input {
+    border: 0px;
+    border-bottom: 1px solid #bbb;
+    margin: 10px;
+    padding: 5px;
+    font-size: small;
+}
+
+.detail textarea {
+    height: 60px;
+    border: 1px solid #bbb;
+    resize: none;
+}
+
+.detail2 td:first-child {
+    font-size: medium;
+    width: 80px;
+}
+
+.detail td:last-child {
+    text-align: left;
+}
+
+.colRed {
+	color: red;
+	font-weight: bold;
+}
